@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Prediction Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Traffic Prediction</h2>
+        
+        <!-- Location Input Form -->
+        <div class="input-container">
+            <label for="location">Enter your location:</label>
+            <input type="text" id="location" placeholder="City or Coordinates">
+        </div>
+
+        <!-- Button to Submit -->
+        <button class="submit-btn" onclick="getWeatherData()">Get Weather and Predict Congestion</button>
+
+        <!-- Weather Info Section -->
+        <div class="weather-info">
+            <h3>Weather Information:</h3>
+            <div id="temp"></div>
+            <div id="humidity"></div>
+            <div id="wind_speed"></div>
+            <div id="precipitation"></div>
+        </div>
+
+        <!-- Congestion Prediction Section -->
+        <div class="prediction-info">
+            <h3>Predicted Congestion Level:</h3>
+            <div id="congestion"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
