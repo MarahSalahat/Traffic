@@ -3,9 +3,23 @@ const path = require('path');
 const app = express();
 
 // Serve static files
-app.use(express.static(path.join(__dirname, '../../dist')));
+// app.use(express.static(path.join(__dirname, '../../dist')));
+///////////////////
+app.use(express.static(path.join(__dirname, 'dist')));
 
+// Default route for serving index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+// Route for serving forum.html
+app.get('/forum', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'forum.html'));
+});
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+////////////////////////
 app.get('/data', (req, res) => {
   res.json({
     timestamps: ['2024-09-01', '2024-09-02', '2024-09-03'],

@@ -9,6 +9,9 @@
 <body>
   <header>
     <h1>Smart City Traffic Dashboard</h1>
+    <nav>
+      <a href="./forum.html"><button>Forum</button></a>
+  </nav>
   </header>
   
   <main>
@@ -27,11 +30,6 @@
       <h2>Traffic Data from Tableau</h2>
       <div id="tableauViz" style="width: 100%; height: 600px;"></div>
     </section>
-    
-    <section>
-      <h2>Forum</h2>
-      <div id="disqus_thread"></div>
-    </section>
   </main>
 
   <script src="./bundle.js"></script>
@@ -49,18 +47,6 @@
       };
       var viz = new tableau.Viz(vizDiv, vizURL, options);
     });
-
-    // Disqus integration
-    var disqus_config = function () {
-      this.page.url = 'http://localhost:3000';  
-      this.page.identifier = 'traffic-dashboard'; 
-    };
-    (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://EXAMPLE.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
   </script>
 </body>
 </html>

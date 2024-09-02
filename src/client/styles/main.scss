@@ -4,24 +4,45 @@ body {
     margin: 0;
     padding: 0;
   }
-  
   header {
-    background-color: #673ab7;
+    background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1em;
   }
   
-  main {
-    padding: 1rem;
+  nav button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
   }
   
   section {
-    margin-bottom: 2rem;
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
   }
   
-  canvas {
-    margin: 0 auto;
-    display: block;
-  }
+  // header {
+  //   background-color: #673ab7;
+  //   color: white;
+  //   text-align: center;
+  //   padding: 1rem;
+  // }
+  
+  // main {
+  //   padding: 1rem;
+  // }
+  
+  // section {
+  //   margin-bottom: 2rem;
+  // }
+  
+  // canvas {
+  //   margin: 0 auto;
+  //   display: block;
+  // }
   
