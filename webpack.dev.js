@@ -13,8 +13,9 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 8080, 
-    open: true, 
+    port: 8080,
+    open: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -36,6 +37,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/client/views/index.html',
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/client/views/forum.html',
+      filename: 'forum.html',
     }),
   ],
 };

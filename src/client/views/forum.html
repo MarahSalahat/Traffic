@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum - Smart City Traffic</title>
+  <link rel="stylesheet" href="../styles/forum.scss">
+</head>
+<body>
+  <header>
+    <h1>Smart City Traffic Forum</h1>
+    <nav>
+        <a href="/"><button>Dashboard</button></a>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Forum</h2>
+      <div id="disqus_thread"></div>
+    </section>
+  </main>
+
+  <script>
+    // Disqus integration
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:3000/forum.html';  
+      this.page.identifier = 'traffic-forum'; 
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://EXAMPLE.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</body>
+</html>

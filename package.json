@@ -13,9 +13,7 @@
     "dependencies": {
         "chart.js": "^4.4.4",
         "express": "^4.17.1",
-        "webpack": "^5.64.4",
-        "webpack-cli": "^4.9.1",
-        "webpack-dev-server": "^4.7.4"
+        "webpack": "^5.64.4"
     },
     "devDependencies": {
         "@babel/core": "^7.25.2",
@@ -29,6 +27,8 @@
         "sass": "^1.77.8",
         "sass-loader": "^12.6.0",
         "style-loader": "^3.3.1",
-        "terser-webpack-plugin": "^5.2.4"
+        "terser-webpack-plugin": "^5.2.4",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.0.4"
     }
 }

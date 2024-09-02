@@ -8,9 +8,9 @@ module.exports = {
   mode: 'production',
   entry: './src/client/js/index.js',
   output: {
-    filename: '[name].[contenthash].js',  
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,  
+    clean: true,
   },
   module: {
     rules: [
@@ -39,15 +39,23 @@ module.exports = {
         collapseWhitespace: true,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: './src/client/views/forum.html',
+      filename: 'forum.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+      },
+    }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',  
+      filename: '[name].[contenthash].css',
     }),
   ],
   optimization: {
     minimize: true,
     minimizer: [
-      new TerserPlugin(),  
-      new CssMinimizerPlugin(),  
+      new TerserPlugin(),
+      new CssMinimizerPlugin(),
     ],
   },
 };
