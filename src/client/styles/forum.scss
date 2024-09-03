@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 header {
-  background-color: #3b5998;
+  background-image: url('https://wallpaperset.com/w/full/c/e/7/69760.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: white;
   text-align: center;
-  padding: 1em;
+  padding: 2.5em;
   font-family: "Playfair Display", serif;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -41,7 +44,7 @@ nav button:hover {
 section {
   margin: 1em 0;
   padding: 1em;
-  background-color: #C4DAD2;
+  background-color: #FFF8DB;
   text-align: center;
   border-radius: 3px;
   -webkit-border-radius: 3px;
