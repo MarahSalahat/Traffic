@@ -1,22 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 header {
-    background-color: #3b5998;
-    color: white;
-    text-align: center;
-    padding: 1em;
-  }
+  background-color: #3b5998;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-family: "Playfair Display", serif;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
   
-  nav button {
-    margin: 0.5em;
-    padding: 0.5em 1em;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    cursor: pointer;
-  }
-  
-  section {
-    margin: 1em 0;
-    padding: 1em;
-    border: 1px solid #ddd;
-    background-color: #f1f1f1;
-  }
-  
+nav button {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #78B7D0;
+  border: 1px solid #3b5998;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Playfair Display", serif;
+  color: white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+nav button:hover {
+  background-color: #5890ad;
+  font-weight: 600;
+}
+
+section {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #C4DAD2;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+section h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #3b5998;
+  font-family:"Playfair Display", serif;
+}
+
+
