@@ -71,5 +71,9 @@ module.exports = {
       template: './src/client/views/forum.html',
       filename: 'forum.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/client/views/more-insights.html',
+      filename: 'more-insights.html'
+    }),
   ],
 };
