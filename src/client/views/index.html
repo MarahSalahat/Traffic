@@ -6,7 +6,7 @@
   <title>Smart City Traffic Dashboard</title>
   <link rel="stylesheet" href="./main.css">
 </head>
-<body>
+<body class="index-page">
   <header>
     <h1>Smart City Traffic Dashboard</h1>
     <nav>
@@ -15,28 +15,36 @@
   </header>
   
   <main>
-    
-    <canvas id="tempChart" width="50" height="10"></canvas>
-    
-    <section>
-      <h2>Current Weather</h2>
-      <p>Temperature: <span id="temp">Loading...</span></p>
-      <p>Conditions: <span id="conditions">Loading...</span></p>
-    </section>
-
-    <section>
-      <h2>Traffic Insights</h2>
-      <canvas id="trafficChart" width="100" height="40"></canvas>
-    </section>
-
-    <section>
-      <h2>Traffic Data from Tableau</h2>
-      <!-- Simplified Tableau Embed Code -->
-      <iframe src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/Sheet3?:embed=y&:display_count=no&:showVizHome=no"
-              width="100%" height="600" frameborder="0"></iframe>
-    </section>
+    <div class="charts-container">
+      <!-- Chart with description -->
+      <div class="chart-wrapper">
+        <canvas id="tempChart" width="100" height="60"></canvas>
+        <p>Temperature: <span id="temp">Loading...</span></p>
+        <p>Conditions: <span id="conditions">Loading...</span></p>
+      </div>
+      
+      <!-- Congestion Prediction System -->
+      <div class="prediction-form">
+        <img src="<%= require('../images/smartCity.png') %>" alt="Congestion Prediction " class="congestion-image>
+        <h2>Quick Congestion Prediction</h2>
+        <form id="predictionForm">
+          <label for="location">Enter Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter location">
+          <button type="submit">Predict</button>
+        </form>
+        <div id="predictionResult">
+          <!-- Placeholder for congestion prediction result -->
+        </div>
+      </div>
+    </div>
   </main>
 
-  <script src="./bundle.js"></script> <!-- This should be the output from Webpack -->
+  <section>
+    <h2>Traffic Insights</h2>
+    <iframe src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/Sheet3?:embed=y&:display_count=no&:showVizHome=no"
+            width="100%" height="600"></iframe>
+  </section>
+
+  <script src="./bundle.js"></script>
 </body>
 </html>

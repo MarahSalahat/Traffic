@@ -1,0 +1,137 @@
+// Variables
+$primary-color: #007bff;
+$background-color: #111111;
+$font-family: Arial, sans-serif;
+
+// Base styles
+body {
+  margin: 0;
+  font-family: $font-family;
+}
+
+header {
+  background-color: $background-color;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+// Styles specific to index.html
+.index-page {
+  main {
+    padding: 20px;
+
+    .charts-container {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+
+      // Chart and weather description section
+      .chart-wrapper {
+        width: 45%;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        #tempChart {
+          width: 200px; 
+          height: 100px; 
+        }
+
+        .chart-description {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #333;
+        }
+
+        p {
+          margin: 5px 0;
+        }
+      }
+
+      
+      // Congestion prediction system
+.prediction-form {
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  
+    .congestion-image {
+      width: 40px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+      label {
+        font-size: 16px;
+        margin-right: 5px;
+      }
+  
+      input {
+        padding: 8px;
+        font-size: 14px;
+        width: 60%; // Adjust the width of the input field
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+  
+      button {
+        padding: 8px 12px;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  
+    #predictionResult {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+  }
+  
+  
+    }
+  }
+
+  section {
+    &:nth-of-type(2) {
+      iframe {
+        border: none;
+        width: 100%;
+        height: 600px;
+      }
+    }
+  }
+}
