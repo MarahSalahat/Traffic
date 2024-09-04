@@ -1,11 +1,16 @@
 import Chart from 'chart.js/auto';
 
-// Get the context for the temperature chart
-const ctx = document.getElementById('tempChart').getContext('2d');
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the context for the temperature chart
+  const ctx = document.getElementById('tempChart').getContext('2d');
+  // Fetch weather data immediately on page load
+  fetchWeatherData();
+//setInterval(fetchWeatherData, 2000);
+});
 
 // OpenWeatherMap API key and city
 const apiKey = '7d2a8ee879839efcbb361ff66393dfb2'; 
-const city = 'London';
+const city = 'jordan';
 
 // Variable to store the chart instance
 let chart;
@@ -69,8 +74,3 @@ export const fetchWeatherData = async () => {
   }
 };
 
-// Fetch weather data immediately on page load
-fetchWeatherData();
-
-
-setInterval(fetchWeatherData, 2000);
