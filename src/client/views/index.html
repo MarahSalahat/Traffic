@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart City Traffic Dashboard</title>
-  <link rel="stylesheet" href="../styles/main.scss">
+  <!-- <link rel="stylesheet" href="../styles/main.scss"> -->
 </head>
 <body class="index-page">
-  <header>
-    <h1>Smart City Traffic Dashboard</h1>
+  <header class="navbar">
+    <h1 class="textAnimation">Smart City Traffic App</h1>
     <nav>
-      <a href="./forum.html"><button>Forum</button></a>
+      <a href="index.html" class="nav-link active">Dashboard</a>
+      <a href="forum.html" class="nav-link">Forum</a>
     </nav>
   </header>
   
@@ -25,25 +26,32 @@
       
       <!-- Congestion Prediction System -->
       <div class="prediction-form">
-        <img src="<%= require('../images/smartCity.png') %>" alt="Congestion Prediction " class="congestion-image>
+        <img src="" alt="Congestion Prediction " class="congestion-image">
         <h2>Quick Congestion Prediction</h2>
         <form id="predictionForm">
           <label for="location">Enter Location:</label>
-          <input type="text" id="location" name="location" placeholder="Enter location">
+          <input type="text" id="location" name="location" placeholder="Enter location" loading="lazy">
           <button type="submit">Predict</button>
         </form>
         <div id="predictionResult">
           <!-- Placeholder for congestion prediction result -->
         </div>
       </div>
+      <!--  -->
     </div>
   </main>
 
   <section>
-    <h2>Traffic Insights</h2>
+    <h2 class="textAnimation">Traffic Insights</h2>
     <iframe src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/Sheet3?:embed=y&:display_count=no&:showVizHome=no"
             width="100%" height="600"></iframe>
   </section>
+  <!-- Footer Section -->
+  <footer>
+    <h2>Smart City Traffic App</h2>
+    <p>&copy; 2024 Smart City Traffic. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
 
   <script src="./bundle.js"></script>
 </body>

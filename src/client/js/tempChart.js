@@ -72,5 +72,4 @@ export const fetchWeatherData = async () => {
 // Fetch weather data immediately on page load
 fetchWeatherData();
 
-
 setInterval(fetchWeatherData, 2000);

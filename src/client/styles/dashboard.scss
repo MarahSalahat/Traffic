@@ -1,35 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
 // Variables
 $primary-color: #007bff;
 $background-color: #111111;
 $font-family: Arial, sans-serif;
 
+// Navigation styles
+$navbar-text: white;
+$nav-link-bg: #555;
+$nav-link-hover-bg: #5e95d7;
+$border-color: #3b5998;
+$transition-duration: 0.5s;
+
+// Input styles
+$input-bg: #f9f9f9;
+$input-border: #ccc;
+$input-border-focus: $primary-color;
+$input-text-color: #333;
+$placeholder-color: #aaa;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$input-transition-duration: 0.3s;
+
+// Label styles
+$label-color: #555;
+$label-font-size: 16px;
+$label-font-weight: bold;
+$label-margin-bottom: 8px;
+$label-transition-duration: 0.3s;
 // Base styles
 body {
   margin: 0;
   font-family: $font-family;
 }
 
-header {
-  background-color: $background-color;
-  padding: 10px;
-  text-align: center;
-}
-
-nav {
-  button {
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-}
-
 // Styles specific to index.html
 .index-page {
+  padding-top: 2rem;
   main {
     padding: 20px;
-
     .charts-container {
       display: flex;
       gap: 20px;
@@ -37,15 +45,20 @@ nav {
 
       // Chart and weather description section
       .chart-wrapper {
-        width: 45%;  
+        background-color: #f9f9f9; // Light background for the form
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
 
         #tempChart {
-          width: 200px; 
-          height: 100px; 
+          width: 200px;
+          height: 100px;
+          margin-bottom: 20px;
         }
 
         .chart-description {
@@ -55,73 +68,128 @@ nav {
         }
 
         p {
-          margin: 5px 0;
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 15px;
+          padding: 12px;
+          margin: 10px;
+          font-size: 18px;
+          color: #333;
+          transition: color $transition-duration;
+
+          span {
+            font-weight: bold;
+            color: $primary-color;
+          }
         }
       }
 
-      
       // Congestion prediction system
-.prediction-form {
-    width: 50%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-  
-    .congestion-image {
-      width: 40px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-  
-    h2 {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-  
-    form {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-  
-      label {
-        font-size: 16px;
-        margin-right: 5px;
-      }
-  
-      input {
-        padding: 8px;
-        font-size: 14px;
-        width: 60%; // Adjust the width of the input field
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-  
-      button {
-        padding: 8px 12px;
-        background-color: $primary-color;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: darken($primary-color, 10%);
+      .prediction-form {
+        //
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #f9f9f9; // Light background for the form
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .congestion-image {
+          width: 80%;
+          height: auto;
+          margin-bottom: 0;
+        }
+        
+        h2 {
+          background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+          background-size: cover;
+          color: transparent;
+          -moz-background-clip: text;
+          -webkit-background-clip: text;
+          text-transform: uppercase;
+          font-size: 35px;
+          font-weight: bold;
+          font-family: Righteous;
+          margin-bottom: 20px;
+        }
+        // =============
+
+        form {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          label {
+            display: block;
+            color: $label-color;
+            font-size: $label-font-size;
+            font-weight: $label-font-weight;
+            margin-bottom: $label-margin-bottom;
+            transition: color $label-transition-duration;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+
+          input {
+            padding: 12px 15px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid $input-border;
+            border-radius: 12px;
+            background-color: $input-bg;
+            color: $input-text-color;
+            box-shadow: 0 2px 4px $shadow-color;
+            transition: border-color $input-transition-duration, box-shadow $input-transition-duration, transform $input-transition-duration;
+
+            &::placeholder {
+              color: $placeholder-color;
+              opacity: 1;
+            }
+
+            &:focus {
+              border-color: $input-border-focus;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              transform: scale(1.02);
+              outline: none;
+            }
+
+            &:hover {
+              border-color: $input-border-focus;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            }
+          }
+
+          button {
+            margin: 0.5em;
+            padding: 0.5em 1em;
+            background-color: $nav-link-bg;
+            border: 1px solid $border-color;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: "Playfair Display", serif;
+            color: $navbar-text;
+            border-radius: 3px;
+            transition: background-color $transition-duration;
+
+            &:hover {
+              background-color: $nav-link-hover-bg;
+              font-weight: 600;
+            }
+          }
+        }
+
+        #predictionResult {
+          margin-top: 20px;
+          font-size: 16px;
+          color: #333;
         }
       }
-    }
-  
-    #predictionResult {
-      margin-top: 20px;
-      font-size: 16px;
-      color: #333;
-    }
-  }
-  
-  
     }
   }
 
