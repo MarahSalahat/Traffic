@@ -1,6 +1,10 @@
 import '../styles/main.scss';  
 import '../styles/dashboard.scss';  
-import { image } from '../images/smartCity.png';
+import '../styles/navbar.scss';
+import '../styles/textAnimation.scss';
+import '../styles/footer.scss';
+
+import  image  from '../images/smartCity.png';
 import { fetchWeatherData } from './tempChart';  
 
 document.addEventListener('DOMContentLoaded', () => {

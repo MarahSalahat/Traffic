@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+$navbar-bg: #333;
+$navbar-text: white;
+$nav-link-bg: #555;
+$nav-link-hover-bg: #5e95d7;
+$nav-link-active-bg: #78B7D0;
+$border-color: #3b5998;
+$transition-duration: 0.5s;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: $navbar-bg;
+  color: $navbar-text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  h1 {
+    margin: 0;
+    padding-left: 3rem;
+  }
+
+  nav {
+    display: flex;
+    padding-right: 4rem;
+
+    .nav-link {
+      margin: 0.5em;
+      padding: 0.5em 1em;
+      background-color: $nav-link-bg;
+      border: 1px solid $border-color;
+      cursor: pointer;
+      font-size: 17px;
+      font-family: "Playfair Display", serif;
+      color: $navbar-text;
+      border-radius: 3px;
+      transition: $transition-duration;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $nav-link-hover-bg;
+        font-weight: 600;
+      }
+
+      &.active {
+        background-color: $nav-link-active-bg;
+        border: 1px solid $border-color;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 60px; // Adjust this value to be the height of the navbar
+  padding: 20px;
+}

@@ -1,0 +1,35 @@
+// Variables
+$footer-bg: #333;
+$footer-text: #ffffff;
+$footer-link: #5e95d7;
+$footer-link-hover: lighten($footer-link, 15%);
+$footer-padding: 20px;
+$footer-font-size: 14px;
+
+// Footer Styles
+footer {
+  background-color: $footer-bg;
+  color: $footer-text;
+  padding: $footer-padding;
+  text-align: center;
+  font-size: $footer-font-size;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  a {
+    color: $footer-link;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $footer-link-hover;
+    }
+  }
+}
