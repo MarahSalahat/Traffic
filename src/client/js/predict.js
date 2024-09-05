@@ -24,7 +24,7 @@ export async function predictCongestion(inputData, model) {
         inputData.isWeekend
       ]], [1, 5]); 
 
-    // Make prediction using the model
+    
     const prediction = model.predict(inputTensor);
     const congestionLevel = prediction.dataSync()[0]; 
     return congestionLevel;

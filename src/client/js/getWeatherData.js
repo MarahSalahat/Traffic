@@ -9,7 +9,7 @@ export const getWeatherData = async (location) => {
     const data = await response.json();
 
     if (response.ok) {
-      // Extract relevant weather data
+      
       return {
         temperature: data.main.temp,
         humidity: data.main.humidity,
