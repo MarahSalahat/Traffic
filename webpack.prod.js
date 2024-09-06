@@ -78,7 +78,11 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/client/views/more-insights.html',
-      filename: 'more-insights.html'
+      filename: 'more-insights.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+      },
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',

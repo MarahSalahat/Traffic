@@ -47,3 +47,75 @@ section {
   -o-border-radius: 3px;
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgba(120, 183, 208, 0.1); // خلفية خفيفة لتحديد العنوان
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    margin-left: 15px;
+    font-size: 28px;
+    color: #333; // لون داكن للعنوان
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+
+    // إضافة خط تحت العنوان يظهر عند التمرير بالفأرة
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #78B7D0;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: #78B7D0;
+
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  .icon {
+    color: #78B7D0;
+    margin-top: 0px;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    // تأثير hover على الأيقونة
+    &:hover {
+      transform: scale(1.1); // تكبير الأيقونة عند التمرير عليها
+      color: #4D9DC4; // تغيير اللون عند التمرير
+    }
+  }
+}
+// For more Buttons:
+.more-insights-link {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    color: #5e95d7;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #5e95d7;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #5e95d7;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

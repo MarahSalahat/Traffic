@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart City Traffic Dashboard</title>
-  
+
 </head>
+
 <body class="index-page">
   <header class="navbar">
     <h1 class="textAnimation">Smart City Traffic App</h1>
@@ -15,7 +17,7 @@
       <a href="more-insights.html" class="nav-link">Insights</a>
     </nav>
   </header>
-  
+
   <main>
     <div class="charts-container">
       <!-- Chart with description -->
@@ -24,7 +26,7 @@
         <p>Temperature: <span id="temp">Loading...</span></p>
         <p>Conditions: <span id="conditions">Loading...</span></p>
       </div>
-      
+
       <!-- Congestion Prediction System -->
       <div class="prediction-form">
         <img src="" alt="Congestion Prediction " class="congestion-image">
@@ -38,18 +40,22 @@
           <!-- Placeholder for congestion prediction result -->
         </div>
       </div>
-      
+
     </div>
   </main>
 
 
   <section>
-    <h2 class="textAnimation">Traffic Insights</h2>
-    <iframe src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/Cognestionthroughtheday?:embed=y&:display_count=no&:showVizHome=no"
-            width="100%" height="600"></iframe>
-    <p><a href="more-insights.html">For more insights, click here</a></p>
+    <div class="section-title">
+      <i class="fa-solid fa-traffic-light fa-4x icon"></i>
+      <h2>Traffic Insights</h2>
+    </div>
+    <iframe
+      src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/Cognestionthroughtheday?:embed=y&:display_count=no&:showVizHome=no"
+      width="100%" height="600"></iframe>
+    <p class="more-insights-link"><a href="more-insights.html">For more insights, click here</a></p>
   </section>
-  
+
   <!-- Footer Section -->
   <footer>
     <h2>Smart City Traffic App</h2>
@@ -59,4 +65,5 @@
 
   <script src="./bundle.js"></script>
 </body>
+
 </html>
