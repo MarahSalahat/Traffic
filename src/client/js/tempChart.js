@@ -5,8 +5,13 @@ const ctx = document.getElementById('tempChart').getContext('2d');
 
 // OpenWeatherMap API key and city
 const apiKey = '7d2a8ee879839efcbb361ff66393dfb2'; 
-const city = 'London';
+let city = 'jordan';
 
+const submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', () => {
+  city = document.getElementById('location').value;
+  fetchWeatherData();
+});
 // Variable to store the chart instance
 let chart;
 

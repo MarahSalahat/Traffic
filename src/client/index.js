@@ -11,9 +11,9 @@ import { fetchWeatherData } from './js/tempChart';
 import { loadModel, predictCongestion } from './js/predict.js';
 import { getWeatherData } from './js/getWeatherData.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   // Fetch the weather data for charting or other use
-  fetchWeatherData(); 
+  const fetchWeather = await fetchWeatherData(); 
 
   // Set the congestion image
   const congestionImgElement = document.querySelector('.congestion-image');
@@ -52,8 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Predict congestion level
     const congestionLevel = await predictCongestion(inputData);
-
+    console.log(congestionLevel)
     // Display the result
-    document.getElementById('predictionResult').innerText = `Predicted Congestion Level: ${congestionLevel}`;
+    document.getElementById('predictionResult').innerHTML = `Predicted Congestion Level: ${congestionLevel}`;
   });
 });
+
