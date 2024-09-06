@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>More Traffic Insights</title>
-
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
+
 <body>
   <header class="navbar">
     <h1 class="textAnimation">More Traffic Insights</h1>
@@ -18,35 +21,48 @@
 
   <main>
     <!-- Existing Section -->
-    <section>
-      <iframe src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/CongestionvsDaytime?:embed=y&:display_count=no&:showVizHome=no"
-              width="100%" height="600"></iframe>
-      <p>This visualization highlights the congestion patterns during different times of the day, comparing daytime and nighttime traffic on weekdays and weekends. It provides insights into how congestion levels vary based on the time of day, helping urban planners and traffic management teams to better understand peak traffic hours and make informed decisions on optimizing traffic flow, especially in highly congested urban areas.</p>
+    <section class="weather-section">
+      <div class="section-title">
+        <i class="fa-solid fa-sun-plant-wilt fa-4x icon"></i>
+        <h2>Effects of weather conditions during the day</h2>
+      </div>
+      <iframe
+        src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/CongestionvsDaytime?:embed=y&:display_count=no&:showVizHome=no"
+        width="100%" height="600"></iframe>
+      <div class="description">
+        <p>This visualization highlights the congestion patterns during different times of the day, comparing daytime and
+          nighttime traffic on weekdays and weekends. It provides insights into how congestion levels vary based on the
+          time of day, helping urban planners and traffic management teams to better understand peak traffic hours and
+          make informed decisions on optimizing traffic flow, especially in highly congested urban areas.</p>
+      </div>
     </section>
 
     <!-- New Section: Weather Conditions Effects on Congestion -->
     <section class="weather-section">
-        <div class="section-title">
-          <img src="" alt="Icon" class="icon">
-          <h2>Weather Conditions Effects on Congestion</h2>
+      <div class="section-title">
+        <i class="fa-solid fa-cloud-sun-rain fa-4x icon"></i>
+        <h2>Weather Conditions Effects on Congestion</h2>
+      </div>
+
+      <div class="slider-container">
+        <div class="slider-item">
+          <iframe
+            src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/TempCngestion?:embed=y&:display_count=no&:showVizHome=no"
+            width="100%" height="400"></iframe>
         </div>
-        
-        <div class="slider-container">
-          <div class="slider-item">
-            <iframe src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/TempCngestion?:embed=y&:display_count=no&:showVizHome=no"
-                    width="100%" height="400"></iframe>
-          </div>
-          <div class="slider-item">
-            <iframe src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/WindCongestion?:embed=y&:display_count=no&:showVizHome=no"
-                    width="100%" height="400"></iframe>
-          </div>
-          <div class="slider-item">
-            <iframe src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/WeatherCongestion?:embed=y&:display_count=no&:showVizHome=no"
-                    width="100%" height="400"></iframe>
-          </div>
+        <div class="slider-item">
+          <iframe
+            src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/WindCongestion?:embed=y&:display_count=no&:showVizHome=no"
+            width="100%" height="400"></iframe>
         </div>
-      </section>
-      
+        <div class="slider-item">
+          <iframe
+            src="https://public.tableau.com/views/UrbanMobilityNTrafficPatternsinSmartCities/WeatherCongestion?:embed=y&:display_count=no&:showVizHome=no"
+            width="100%" height="400"></iframe>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -54,5 +70,7 @@
     <p>&copy; 2024 Smart City Traffic. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
   </footer>
+
 </body>
+
 </html>
